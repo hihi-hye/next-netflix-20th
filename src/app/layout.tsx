@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "normalize.css";
 import StyledComponentsRegistry from "@/lib/styledComponentRegistry";
 
 export const metadata: Metadata = {
