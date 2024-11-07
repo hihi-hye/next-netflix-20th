@@ -1,5 +1,5 @@
-import StyledComponentsRegistry from "@/lib/styledComponentRegistry";
 import type { Metadata } from "next";
+import StyledComponentsRegistry from "@/lib/styledComponentRegistry";
 
 export const metadata: Metadata = {
   title: "Create Next App",
