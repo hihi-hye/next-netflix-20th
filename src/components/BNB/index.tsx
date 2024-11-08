@@ -22,25 +22,30 @@ const MENU_LIST = [
   { title: "More", icon: MoreIcon, href: "/more" },
 ];
 
-function Menu({ data }: { data: Menu }) {
+function Menu({ data, isActive }: { data: Menu; isActive: boolean }) {
   const { title, href } = data;
-  const pathname = usePathname();
 
   return (
     <MenuItemWrapper href={href}>
       <div>
-        <data.icon isActive={pathname === href} />
+        <data.icon isActive={isActive} />
       </div>
-      <Text isActive={pathname === href}>{title}</Text>
+      <Text isActive={isActive}>{title}</Text>
     </MenuItemWrapper>
   );
 }
 
 export default function BNB() {
+  const pathname = usePathname();
+
+  if (pathname === "/") {
+    return null;
+  }
+
   return (
     <Container>
       {MENU_LIST.map((menu) => (
-        <Menu key={menu.title} data={menu} />
+        <Menu key={menu.title} data={menu} isActive={pathname === menu.href} />
       ))}
     </Container>
   );
