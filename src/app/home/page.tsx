@@ -1,7 +1,9 @@
 'use client';
 
-import Card from './_components/RoundCard';
-import styled from 'styled-components';
+import RoundCard from './_components/RoundCard';
+import Card from './_components/Card';
+import { Container } from '../styles';
+import { CardContainer } from './style';
 
 const Home = () => {
   const items = [
@@ -13,29 +15,27 @@ const Home = () => {
   ];
 
   return (
-    <HomeContainer>
-      {items.map((item, index) => (
-        <Card
-          key={index}
-          image={item.image}
-          title={item.title}
-        />
-      ))}
-    </HomeContainer>
+    <Container>
+      <CardContainer>
+        {items.map((item, index) => (
+          <Card
+            key={index}
+            image={item.image}
+            title={item.title}
+          />
+        ))}
+      </CardContainer>
+      <CardContainer>
+        {items.map((item, index) => (
+          <RoundCard
+            key={index}
+            image={item.image}
+            title={item.title}
+          />
+        ))}
+      </CardContainer>
+    </Container>
   );
 };
 
 export default Home;
-
-const HomeContainer = styled.div`
-  display: flex;
-  width: 375px;
-  margin: 1rem;
-  background: black;
-
-  overflow: hidden;
-  overflow-x: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
