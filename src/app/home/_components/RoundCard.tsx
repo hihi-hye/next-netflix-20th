@@ -1,14 +1,11 @@
 import styled from 'styled-components';
+import { CardProps } from './type';
+import { FullCoveredImage } from './style';
 
-type Card = {
-  image: string;
-  title: string;
-};
-
-const RoundCard = ({ image, title }: Card) => {
+const RoundCard = ({ image, title }: CardProps) => {
   return (
     <CardContainer>
-      <Image
+      <FullCoveredImage
         src={image}
         alt={title}
       />
@@ -24,10 +21,4 @@ const CardContainer = styled.div`
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;
