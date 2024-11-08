@@ -18,4 +18,6 @@ export const Container = styled.div`
   height: 100svh;
   max-height: 812px;
   background: black;
+
+  margin: 0 auto;
 `;
