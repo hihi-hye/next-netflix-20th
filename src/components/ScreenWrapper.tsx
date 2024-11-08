@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import { ReactNode } from 'react';
+import styled from 'styled-components';
 
 // height만 자동으로 변합니다
-const Cotnainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -10,6 +10,8 @@ const Cotnainer = styled.div`
   height: 100svh;
   max-height: 812px;
   background: black;
+
+  margin: 0 auto;
 `;
 
 const Content = styled.div`
@@ -36,12 +38,12 @@ const Indicator = styled.div`
 
 export default function ScreenWrapper({ children }: { children: ReactNode }) {
   return (
-    <Cotnainer>
+    <Container>
       <Content>{children}</Content>
 
       <BottomBar>
         <Indicator />
       </BottomBar>
-    </Cotnainer>
+    </Container>
   );
 }

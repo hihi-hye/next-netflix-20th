@@ -2,8 +2,8 @@
 
 import RoundCard from './_components/RoundCard';
 import Card from './_components/Card';
-import { Container } from '../styles';
 import { CardContainer } from './style';
+import ScreenWrapper from '@/components/ScreenWrapper';
 
 const Home = () => {
   const items = [
@@ -15,11 +15,11 @@ const Home = () => {
   ];
 
   return (
-    <Container>
+    <ScreenWrapper>
       <CardContainer>
-        {items.map((item, index) => (
+        {items.map((item) => (
           <Card
-            key={index}
+            key={item.title}
             image={item.image}
             title={item.title}
           />
@@ -34,7 +34,7 @@ const Home = () => {
           />
         ))}
       </CardContainer>
-    </Container>
+    </ScreenWrapper>
   );
 };
 
