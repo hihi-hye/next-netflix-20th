@@ -4,6 +4,9 @@ import RoundCard from './_components/RoundCard';
 import Card from './_components/Card';
 import { CardContainer } from './style';
 import ScreenWrapper from '@/components/ScreenWrapper';
+import { SubTitle, Title } from './_components/style';
+import LargeGradientCard from './_components/LargeGradientCard';
+import PlayNav from './_components/PlayNav';
 
 const Home = () => {
   const items = [
@@ -16,6 +19,24 @@ const Home = () => {
 
   return (
     <ScreenWrapper>
+      <LargeGradientCard
+        key={'index'}
+        image={items[3].image}
+        title={items[3].title}
+      ></LargeGradientCard>
+      <PlayNav movieInfo={items[3]} />
+
+      <Title>Previews</Title>
+      <CardContainer>
+        {items.map((item, index) => (
+          <RoundCard
+            key={index}
+            image={item.image}
+            title={item.title}
+          />
+        ))}
+      </CardContainer>
+      <SubTitle>Continue Watching for Emenalo</SubTitle>
       <CardContainer>
         {items.map((item) => (
           <Card
@@ -25,10 +46,11 @@ const Home = () => {
           />
         ))}
       </CardContainer>
+      <SubTitle>Popular on Netflix</SubTitle>
       <CardContainer>
-        {items.map((item, index) => (
-          <RoundCard
-            key={index}
+        {items.map((item) => (
+          <Card
+            key={item.title}
             image={item.image}
             title={item.title}
           />
