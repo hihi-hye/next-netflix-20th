@@ -1,14 +1,11 @@
-import Link from 'next/link';
-import styled from 'styled-components';
+import Link from "next/link";
+import styled from "styled-components";
 
 const PlayButton = ({ movieInfo }) => {
   return (
-    <Link href={movieInfo || '/'}>
+    <Link href={movieInfo || "/"}>
       <StyledPlayButton>
-        <img
-          src="/icon/playIcon.png"
-          alt="play icon"
-        />
+        <img src="/icon/playIcon.png" alt="play icon" />
         <span>Play</span>
       </StyledPlayButton>
     </Link>
@@ -22,13 +19,13 @@ const StyledPlayButton = styled.div`
   align-items: center;
   padding: 0.6rem 1.2rem;
   gap: 0.2rem;
-  background-color: #c0c0c0;
+  background-color: #c0c0c0; /* Gray background */
   border-radius: 0.25rem;
   cursor: pointer;
 
   img {
     margin-right: 0.5rem;
-    width: 1rem;
+    width: 1rem; /* Adjust size as needed */
     height: auto;
   }
 
