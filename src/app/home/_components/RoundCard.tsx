@@ -24,7 +24,6 @@ const CardContainer = styled.div`
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  margin: 0 10px;
 `;
 
 const Image = styled.img`
