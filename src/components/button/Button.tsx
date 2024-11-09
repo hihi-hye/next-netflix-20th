@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ButtonProps } from './type';
+import { ButtonProps } from '@/types/ButtonProps';
 
 const Button = ({ text, src, type }: ButtonProps) => {
   return (
