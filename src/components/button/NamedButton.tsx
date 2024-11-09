@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import Button from './Button';
+import { ButtonProps } from '@/types/ButtonProps';
 
-const NamedButton = ({ type, src, buttonName, link = '/' }) => {
+const NamedButton = ({ type, src, buttonName, link = '/' }: ButtonProps) => {
   return (
     <Link href={link}>
       <StyledNamedButton>
