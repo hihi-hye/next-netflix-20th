@@ -19,13 +19,13 @@ const StyledPlayButton = styled.div`
   align-items: center;
   padding: 0.6rem 1.2rem;
   gap: 0.2rem;
-  background-color: #c0c0c0; /* Gray background */
+  background-color: #c0c0c0;
   border-radius: 0.25rem;
   cursor: pointer;
 
   img {
     margin-right: 0.5rem;
-    width: 1rem; /* Adjust size as needed */
+    width: 1rem;
     height: auto;
   }
 
