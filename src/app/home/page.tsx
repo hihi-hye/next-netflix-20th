@@ -8,53 +8,71 @@ import { SubTitle, Title } from './_components/style';
 import LargeGradientCard from './_components/LargeGradientCard';
 import PlayNav from './_components/PlayNav';
 import TNB from '@/components/TNB';
+import { useEffect, useState } from 'react';
+import { MovieProps } from '@/types/MovieProps';
+import { fetchMovies } from '@/services/movieApi';
 
 const Home = () => {
-  const items = [
-    { image: '/movie1.jpg', title: 'Movie 1' },
-    { image: '/movie2.jpg', title: 'Movie 2' },
-    { image: '/movie3.jpg', title: 'Movie 3' },
-    { image: '/movie4.jpg', title: 'Movie 4' },
-    { image: '/movie5.jpg', title: 'Movie 5' },
-  ];
+  const IMAGE_BASE_URL = process.env.IMAGE_BASE_URL;
+
+  const [movies, setMovies] = useState<MovieProps[]>([]);
+  const [mainMovie, setMainMovie] = useState<MovieProps | null>(null);
+
+  useEffect(() => {
+    const loadMovies = async () => {
+      try {
+        const moviesData = await fetchMovies();
+        setMovies(moviesData);
+        setMainMovie(mainMovie || moviesData[1]);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    loadMovies();
+  }, []);
 
   return (
     <ScreenWrapper>
       <TNB />
-      <LargeGradientCard
-        key={'index'}
-        image={items[3].image}
-        title={items[3].title}
-      ></LargeGradientCard>
-      <PlayNav movieInfo={items[3]} />
+      {mainMovie && (
+        <>
+          <LargeGradientCard
+            key={'index'}
+            image={`${IMAGE_BASE_URL}w1280/${mainMovie.poster_path}`}
+            title={mainMovie.title}
+          />
+          <PlayNav movieInfo={movies[3]} />
+        </>
+      )}
 
       <Title>Previews</Title>
       <CardContainer>
-        {items.map((item, index) => (
+        {movies.map((movie, index) => (
           <RoundCard
             key={index}
-            image={item.image}
-            title={item.title}
+            image={`${IMAGE_BASE_URL}w1280/${movie.poster_path}`}
+            title={movie.title}
           />
         ))}
       </CardContainer>
       <SubTitle>Continue Watching for Emenalo</SubTitle>
       <CardContainer>
-        {items.map((item) => (
+        {movies.map((movie) => (
           <Card
-            key={item.title}
-            image={item.image}
-            title={item.title}
+            key={movie.title}
+            image={`${IMAGE_BASE_URL}w1280/${movie.poster_path}`}
+            title={movie.title}
           />
         ))}
       </CardContainer>
       <SubTitle>Popular on Netflix</SubTitle>
       <CardContainer>
-        {items.map((item) => (
+        {movies.map((movie) => (
           <Card
-            key={item.title}
-            image={item.image}
-            title={item.title}
+            key={movie.title}
+            image={`${IMAGE_BASE_URL}w1280/${movie.poster_path}`}
+            title={movie.title}
           />
         ))}
       </CardContainer>
