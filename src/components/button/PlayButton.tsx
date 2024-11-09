@@ -1,9 +1,10 @@
+import { MovieProps } from "@/types/MovieProps";
 import Link from "next/link";
 import styled from "styled-components";
 
-const PlayButton = ({ movieInfo }) => {
+const PlayButton = ({ id }: MovieProps) => {
   return (
-    <Link href={movieInfo || "/"}>
+    <Link href={`/movie/${id}` || "/"}>
       <StyledPlayButton>
         <img src="/icon/playIcon.png" alt="play icon" />
         <span>Play</span>
