@@ -14,6 +14,11 @@ const Container = styled.div`
   background: black;
 
   margin: 0 auto;
+  overflow: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const Content = styled.div`
