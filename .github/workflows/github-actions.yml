@@ -16,7 +16,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby
-          gem install mustache
+          sudo gem install mustache
 
       - name: Run build script
         run: sh ./build.sh
