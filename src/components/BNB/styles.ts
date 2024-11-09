@@ -1,7 +1,11 @@
-import Link from "next/link";
-import styled from "styled-components";
+import Link from 'next/link';
+import styled from 'styled-components';
 
 export const Container = styled.nav`
+  position: fixed;
+  bottom: 0px;
+  width: 320px;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
@@ -21,7 +25,7 @@ export const MenuItemWrapper = styled(Link)`
 
 export const Text = styled.p<{ isActive: boolean }>`
   margin: 0;
-  color: ${({ isActive }) => (isActive ? "#ffffff" : "#8C8787")};
+  color: ${({ isActive }) => (isActive ? '#ffffff' : '#8C8787')};
   font-size: 8.2px;
   font-weight: 500;
   letter-spacing: 0.25999999046325684px;
