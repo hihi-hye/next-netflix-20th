@@ -7,6 +7,7 @@ import ScreenWrapper from '@/components/ScreenWrapper';
 import { SubTitle, Title } from './_components/style';
 import LargeGradientCard from './_components/LargeGradientCard';
 import PlayNav from './_components/PlayNav';
+import TNB from '@/components/TNB';
 
 const Home = () => {
   const items = [
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <ScreenWrapper>
+      <TNB />
       <LargeGradientCard
         key={'index'}
         image={items[3].image}
