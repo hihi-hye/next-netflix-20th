@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react';
 const MovieList = () => {
   const [movies, setMovies] = useState<MovieProps[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadMovies = async () => {
@@ -16,9 +15,7 @@ const MovieList = () => {
         const moviesData = await fetchMovies();
         setMovies(moviesData);
       } catch (err) {
-        setError('Failed to load movies');
-      } finally {
-        setLoading(false);
+        console.log(err);
       }
     };
 
@@ -26,7 +23,6 @@ const MovieList = () => {
   }, []);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
 
   return (
     <div>
