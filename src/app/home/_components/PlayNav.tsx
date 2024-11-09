@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import NamedButton from '@/components/button/NamedButton';
 import PlayButton from '@/components/button/PlayButton';
+import { MovieProps } from '@/types/MovieProps';
 
-const PlayNav = ({ movieInfo }) => {
+const PlayNav = ({ movie }: { movie: MovieProps }) => {
   return (
     <Container>
       <NamedButton
@@ -11,7 +12,7 @@ const PlayNav = ({ movieInfo }) => {
         buttonName="My List"
         link="/"
       />
-      <PlayButton movieInfo={movieInfo} />
+      <PlayButton movie={movie} />
       <NamedButton
         type="button"
         src="/icon/infoIcon.svg"

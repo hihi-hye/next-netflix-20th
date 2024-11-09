@@ -1,5 +1,5 @@
 export interface MovieProps {
-  id: number;
+  id: number | string;
   title: string;
   overview: string;
   release_date: string;

@@ -42,7 +42,7 @@ const Home = () => {
             image={`${IMAGE_BASE_URL}w1280/${mainMovie.poster_path}`}
             title={mainMovie.title}
           />
-          <PlayNav movieInfo={movies[3]} />
+          <PlayNav movie={mainMovie} />
         </>
       )}
 
