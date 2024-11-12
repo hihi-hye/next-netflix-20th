@@ -23,6 +23,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   flex: 1;
+  padding-bottom: 48px;
 `;
 
 const BottomBar = styled.div`
