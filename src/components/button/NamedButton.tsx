@@ -7,10 +7,7 @@ const NamedButton = ({ type, src, buttonName, link = '/' }: ButtonProps) => {
   return (
     <Link href={link}>
       <StyledNamedButton>
-        <Button
-          type={type}
-          src={src}
-        />
+        <Button type={type} src={src} />
         <div className="buttonName">{buttonName}</div>
       </StyledNamedButton>
     </Link>

@@ -1,12 +1,12 @@
-import { ElementType } from "react";
-import { usePathname } from "next/navigation";
+import { ElementType } from 'react';
+import { usePathname } from 'next/navigation';
 
-import ComingSoonIcon from "@/assets/ComingSoonIcon";
-import DownloadsIcon from "@/assets/DownloadsIcon";
-import HomeIcon from "@/assets/HomeIcon";
-import MoreIcon from "@/assets/MoreIcon";
-import SearchIcon from "@/assets/SearchIcon";
-import { Container, MenuItemWrapper, Text } from "./styles";
+import ComingSoonIcon from '@/assets/ComingSoonIcon';
+import DownloadsIcon from '@/assets/DownloadsIcon';
+import HomeIcon from '@/assets/HomeIcon';
+import MoreIcon from '@/assets/MoreIcon';
+import SearchIcon from '@/assets/SearchIcon';
+import { Container, MenuItemWrapper, Text } from './styles';
 
 interface Menu {
   title: string;
@@ -15,11 +15,11 @@ interface Menu {
 }
 
 const MENU_LIST = [
-  { title: "Home", icon: HomeIcon, href: "/home" },
-  { title: "Search", icon: SearchIcon, href: "/search" },
-  { title: "Coming Soon", icon: ComingSoonIcon, href: "/soon" },
-  { title: "Downloads", icon: DownloadsIcon, href: "/download" },
-  { title: "More", icon: MoreIcon, href: "/more" },
+  { title: 'Home', icon: HomeIcon, href: '/home' },
+  { title: 'Search', icon: SearchIcon, href: '/search' },
+  { title: 'Coming Soon', icon: ComingSoonIcon, href: '/soon' },
+  { title: 'Downloads', icon: DownloadsIcon, href: '/download' },
+  { title: 'More', icon: MoreIcon, href: '/more' },
 ];
 
 function Menu({ data, isActive }: { data: Menu; isActive: boolean }) {
@@ -38,7 +38,7 @@ function Menu({ data, isActive }: { data: Menu; isActive: boolean }) {
 export default function BNB() {
   const pathname = usePathname();
 
-  if (pathname === "/") {
+  if (pathname === '/') {
     return null;
   }
 

@@ -1,11 +1,11 @@
-import { MovieProps } from "@/types/MovieProps";
-import Link from "next/link";
-import styled from "styled-components";
+import { MovieProps } from '@/types/MovieProps';
+import Link from 'next/link';
+import styled from 'styled-components';
 
 // 전역으로 뺀 이유 : 영화 상세페이지에서 길게 또 쓰임
 const PlayButton = ({ movie }: { movie: MovieProps }) => {
   return (
-    <StyledLink href={`/movie/${movie.id}` || "/"}>
+    <StyledLink href={`/movie/${movie.id}` || '/'}>
       <StyledPlayButton>
         <img src="/icon/playIcon.png" alt="play icon" />
         <span>Play</span>

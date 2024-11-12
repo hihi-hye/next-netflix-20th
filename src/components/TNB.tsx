@@ -31,12 +31,7 @@ export default function TNB() {
 
   return (
     <Container>
-      <Image
-        src="/logo.png"
-        alt="logo"
-        width={56.67}
-        height={57}
-      />
+      <Image src="/logo.png" alt="logo" width={56.67} height={57} />
 
       <MenuItem>TV Shows</MenuItem>
       <MenuItem>Movies</MenuItem>

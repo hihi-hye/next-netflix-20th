@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import Lottie from "react-lottie-player";
-import netflixLogo from "./netflixLogo.json";
+import { useRouter } from 'next/navigation';
+import Lottie from 'react-lottie-player';
+import netflixLogo from './netflixLogo.json';
 
-import ScreenWrapper from "@/components/ScreenWrapper";
-import { LottieWrapper } from "./styles";
+import ScreenWrapper from '@/components/ScreenWrapper';
+import { LottieWrapper } from './styles';
 
 export default function Home() {
   const router = useRouter();
 
   function goHome() {
-    router.replace("/home");
+    router.replace('/home');
   }
 
   return (

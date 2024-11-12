@@ -5,10 +5,7 @@ import { FullCoveredImage } from './style';
 const LargeGradientCard = ({ image, title }: CardProps) => {
   return (
     <CardContainer>
-      <FullCoveredImage
-        src={image}
-        alt={title}
-      />
+      <FullCoveredImage src={image} alt={title} />
       <Overlay />
     </CardContainer>
   );
