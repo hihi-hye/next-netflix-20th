@@ -3,7 +3,7 @@ import { SubTitle } from './style';
 import { CardContainer } from '../style';
 import Card from './Card';
 
-function shuffleArray(array) {
+function shuffleArray(array: MovieProps[]) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]; // 요소 교환
