@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import RoundCard from './_components/RoundCard';
-import Card from './_components/Card';
-import { CardContainer } from './style';
-import ScreenWrapper from '@/components/ScreenWrapper';
-import { SubTitle, Title } from './_components/style';
-import LargeGradientCard from './_components/LargeGradientCard';
-import PlayNav from './_components/PlayNav';
-import TNB from '@/components/TNB';
-import { useEffect, useState } from 'react';
-import { MovieProps } from '@/types/MovieProps';
-import { fetchMovies } from '@/services/movieApi';
+import RoundCard from "./_components/RoundCard";
+import Card from "./_components/Card";
+import { CardContainer } from "./style";
+import ScreenWrapper from "@/components/ScreenWrapper";
+import { SubTitle, Title } from "./_components/style";
+import LargeGradientCard from "./_components/LargeGradientCard";
+import PlayNav from "./_components/PlayNav";
+import TNB from "@/components/TNB";
+import { useEffect, useState } from "react";
+import { MovieProps } from "@/types/MovieProps";
+import { fetchMovies } from "@/services/fetchMovies";
 
 const Home = () => {
   const IMAGE_BASE_URL = process.env.IMAGE_BASE_URL;
@@ -38,7 +38,7 @@ const Home = () => {
       {mainMovie && (
         <>
           <LargeGradientCard
-            key={'index'}
+            key={"index"}
             image={`${IMAGE_BASE_URL}w1280/${mainMovie.poster_path}`}
             title={mainMovie.title}
           />
