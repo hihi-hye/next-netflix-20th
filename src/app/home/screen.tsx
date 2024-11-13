@@ -3,7 +3,7 @@
 import RoundCard from './_components/RoundCard';
 import ScreenWrapper from '@/components/ScreenWrapper';
 import { Title } from './_components/style';
-import LargeGradientCard from './_components/LargeGradientCard';
+import LargeGradientCard from '../../components/LargeGradientCard';
 import PlayNav from './_components/PlayNav';
 
 import { CardContainer } from './style';

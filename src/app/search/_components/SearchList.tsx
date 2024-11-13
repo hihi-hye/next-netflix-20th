@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { MovieProps } from '@/types/MovieProps';
 import PlayCircleIcon from '@/assets/PlayCircleIcon';
@@ -27,6 +28,10 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
+`;
+
+const MovieItemWrapper = styled(Link)`
+  text-decoration: none;
 `;
 
 const MovieItem = styled.li`
@@ -69,18 +74,20 @@ export default function SearchList({
       <Title>{query ? `Search Result of: ${query}` : 'Top Searches'}</Title>
       <List>
         {movieList.map((movie) => (
-          <MovieItem key={movie.id}>
-            <Thumbnail
-              src={`${process.env.IMAGE_BASE_URL}w1280/${movie.poster_path}`}
-              alt={movie.title}
-              width={146}
-              height={76}
-            />
+          <MovieItemWrapper key={movie.id} href={`/detail/${movie.id}`}>
+            <MovieItem>
+              <Thumbnail
+                src={`${process.env.IMAGE_BASE_URL}w1280/${movie.poster_path}`}
+                alt={movie.title}
+                width={146}
+                height={76}
+              />
 
-            <MovieTitle>{movie.title}</MovieTitle>
+              <MovieTitle>{movie.title}</MovieTitle>
 
-            <PlayCircleIcon />
-          </MovieItem>
+              <PlayCircleIcon />
+            </MovieItem>
+          </MovieItemWrapper>
         ))}
       </List>
     </Container>
