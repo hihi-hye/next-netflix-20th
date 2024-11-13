@@ -12,7 +12,6 @@ import { MovieProps } from '@/types/MovieProps';
 import useDebounce from '@/hooks/useDebounce';
 
 import ScreenWrapper from '@/components/ScreenWrapper';
-import MovieList from '../home/_components/MovieList';
 import { Input, InputContainer, TransparentButton } from './styles';
 
 import SearchIcon from '@/assets/SearchIcon';
