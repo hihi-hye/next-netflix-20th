@@ -25,7 +25,7 @@ const MenuItem = styled.p`
 export default function TNB() {
   const pathname = usePathname();
 
-  if (pathname === '/') {
+  if (pathname !== '/home') {
     return null;
   }
 
