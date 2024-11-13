@@ -17,6 +17,7 @@ import { Input, InputContainer, TransparentButton } from './styles';
 
 import SearchIcon from '@/assets/SearchIcon';
 import XIcon from '@/assets/XIcon';
+import SearchList from './_components/SearchList';
 
 export default function SearchScreen({
   movieList,
@@ -65,7 +66,7 @@ export default function SearchScreen({
         </TransparentButton>
       </InputContainer>
 
-      <MovieList title="title" movieList={movieList} />
+      <SearchList query={query} movieList={movieList} />
     </ScreenWrapper>
   );
 }
