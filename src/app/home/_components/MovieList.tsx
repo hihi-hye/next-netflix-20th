@@ -26,7 +26,7 @@ export default function MovieList({
       <CardContainer>
         {shuffleArray(movieList).map((movie: MovieProps) => (
           <Card
-            key={movie.title}
+            key={movie.id}
             image={`${IMAGE_BASE_URL}w1280/${movie.poster_path}`}
             title={movie.title}
           />

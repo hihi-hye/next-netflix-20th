@@ -1,11 +1,11 @@
 import { ElementType } from 'react';
 import { usePathname } from 'next/navigation';
 
-import ComingSoonIcon from '@/assets/ComingSoonIcon';
-import DownloadsIcon from '@/assets/DownloadsIcon';
-import HomeIcon from '@/assets/HomeIcon';
-import MoreIcon from '@/assets/MoreIcon';
-import SearchIcon from '@/assets/SearchIcon';
+import ComingSoonIcon from '@/assets/Menu_ComingSoonIcon';
+import DownloadsIcon from '@/assets/Menu_DownloadsIcon';
+import HomeIcon from '@/assets/Menu_HomeIcon';
+import MoreIcon from '@/assets/Menu_MoreIcon';
+import SearchIcon from '@/assets/Menu_SearchIcon';
 import { Container, MenuItemWrapper, Text } from './styles';
 
 interface Menu {
