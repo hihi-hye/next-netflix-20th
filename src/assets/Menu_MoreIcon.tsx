@@ -9,7 +9,7 @@ export default function MoreIcon({ isActive = false }: { isActive?: boolean }) {
     >
       <path
         d="M1 4V7.4H22V4H1ZM1 10.8V14.2H22V10.8H1ZM1 17.6V21H22V17.6H1Z"
-        fill={isActive ? "#ffffff" : "#8C8787"}
+        fill={isActive ? '#ffffff' : '#8C8787'}
       />
     </svg>
   );

@@ -8,14 +8,7 @@ const Button = ({ text, src, type }: ButtonProps) => {
       type={type}
       //   onClick={onClick}
     >
-      {src ? (
-        <img
-          src={src}
-          alt={src}
-        />
-      ) : (
-        text
-      )}
+      {src ? <img src={src} alt={src} /> : text}
     </ButtonContainer>
   );
 };

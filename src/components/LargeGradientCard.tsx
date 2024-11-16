@@ -1,14 +1,11 @@
 import styled from 'styled-components';
-import { CardProps } from './type';
-import { FullCoveredImage } from './style';
+import { CardProps } from '@/app/home/_components/type';
+import { FullCoveredImage } from '@/app/home/_components/style';
 
 const LargeGradientCard = ({ image, title }: CardProps) => {
   return (
     <CardContainer>
-      <FullCoveredImage
-        src={image}
-        alt={title}
-      />
+      <FullCoveredImage src={image} alt={title} />
       <Overlay />
     </CardContainer>
   );

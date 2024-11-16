@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
-import TNB from "./TNB";
-import BNB from "./BNB";
+import { ReactNode } from 'react';
+import styled from 'styled-components';
+import TNB from './TNB';
+import BNB from './BNB';
 
 // height만 자동으로 변합니다
 const Container = styled.div`
@@ -23,6 +23,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   flex: 1;
+  padding-bottom: 48px;
 `;
 
 const BottomBar = styled.div`
