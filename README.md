@@ -77,9 +77,21 @@ export default function DelayedData() {
 ```
 ### 기본적인 git add, commit, push, pull, merge, rebase 등의 명령어에 대해 알아봅시다(+ git branch 전략이나 다른 git 명령어도 좋습니다!)
 
+
 **Git에서의 흐름**을 기준으로 git 명령어에 대해 설명한다.
 1. **작업 디렉토리 (Working Directory)**:
-    - 게 쓰인다.
+    - 실제로 코드 작업을 하는 디렉토리다.
+    - 파일을 생성하거나 수정하면, 변경 사항은 "Tracked" 상태(추적 중) 또는 "Untracked" 상태(추적되지 않음)가 된다.
+2. **스테이징 영역 (Staging Area)**:
+    - 변경된 파일을 `git add` 명령어로 스테이징 영역에 올립니다.
+    - 스테이징된 파일만이 commit 대상이 됩니다.
+3. **로컬 리포지토리 (Local Repository)**:
+    - 스테이징 영역의 변경 사항을 `git commit` 명령어로 로컬 리포지토리에 저장
+4. **원격 리포지토리 (Remote Repository)**:
+    - 로컬 리포지토리에서 커밋된 내용을 `git push`로 원격 리포지토리에 업로드
+
+ **Merge와 Rebase**
+특히 협업 할 때 중요하 쓰인다.
 
 |**특징**|**Merge**|**Rebase**|
 |---|---|---|
